@@ -1,21 +1,13 @@
-def main(string):
-    length = len(string)
-    character_list = []
-    ascii_list = []
-    l = 0
+import sys
 
-    # split string into a list
-    while l < length:
-        letter = string[l:l+1]
-        character_list.append(letter)
-        l = l+1
+string = str(sys.argv[1])
+length = len(string)
+ascii_list = []
+l = 0
 
-        # covert to ascii characters
-        if l >= length:
-            for char in character_list:
-                ascii_char = ord(char)
-                ascii_list.append(ascii_char)
-
-            print(ascii_list)
-
-main("alert(1)")
+# split string into a list and convert the characters
+while l < length:
+    letter = string[l]
+    ascii_list.append(ord(letter))
+    l = l+1
+print(ascii_list)
