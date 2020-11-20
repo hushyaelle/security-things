@@ -1,13 +1,9 @@
 import sys
 
 string = str(sys.argv[1])
-length = len(string)
 ascii_list = []
-l = 0
+temp_list = list(string)
 
-# split string into a list and convert the characters
-while l < length:
-    letter = string[l]
-    ascii_list.append(ord(letter))
-    l = l+1
+for i in temp_list:
+    ascii_list.append(ord(i))
 print(ascii_list)
